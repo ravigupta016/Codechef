@@ -1,0 +1,8 @@
+t=int(input())
+f=[]
+while(t):
+    f.append(int(input()))
+    t=t-1
+f.sort()
+for i in range (len(f)):
+    print(f[i])

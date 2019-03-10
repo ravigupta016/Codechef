@@ -1,0 +1,36 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+bool isprime(int m)
+{
+   int root=sqrt(m);
+    if(m==1)
+        return false;
+    if(m==2 || m==3 || m==5 || m==7)
+        return true;
+    for(int i=2;i<=root;i++)
+    {
+        if(m%i==0)
+            return false;
+
+    }
+    return true;
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long m,n;
+        cin>>m>>n;
+        while(m<=n)
+        {
+            if(isprime(m))
+                cout<<m<<endl;
+            m++;
+        }
+
+
+    }
+}

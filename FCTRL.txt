@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        long n,z=0;
+        cin>>n;
+        while(n)
+        {
+            z+=n/5;
+            n=n/5;
+        }
+        cout<<z<<endl;
+    }
+    return 0;
+}

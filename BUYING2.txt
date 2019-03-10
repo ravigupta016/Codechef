@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,n,x,v,su=0;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n>>x;
+        int a[n];
+        for(int i=0;i<n;i++)
+            cin>>a[i];
+        int soa=0;
+        su=accumulate(a,a+n,soa);
+       // cout<<su<<endl;
+        int *m;
+        m=std::min_element(a,a+n);
+       // cout<<(*m)<<endl;
+        v=su/x;
+        if(su%x<(*m))
+            cout<<v<<endl;
+        else
+            cout<<-1<<endl;
+    }
+    return 0;
+}

@@ -1,0 +1,9 @@
+t=int(input())
+f=[0 for x in range(t)]
+for i in range (0,t):
+    f[i]=int(input())
+for i in range (0,t):
+    fact=1
+    for j in range(f[i],1,-1):
+        fact=fact*j
+    print(fact)

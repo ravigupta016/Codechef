@@ -1,0 +1,7 @@
+def rem(a,b):
+    return a%b
+n=int(input())
+while(n):
+    a,b=map(int,input().split())
+    print(int(rem(a,b)))
+    n=n-1    

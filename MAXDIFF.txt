@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,k;
+        cin>>n>>k;
+        ll arr[n];
+        for(int i=0;i<n;i++)
+            cin>>arr[i];
+        sort(arr,arr+n);
+        int ck = min(n - k, k);
+        ll init=0;
+        ll sum1=accumulate(arr,arr+ck,init);
+        ll sum2=accumulate(arr+ck,arr+n,init);
+        ll ans=sum2-sum1;
+        cout<<abs(ans)<<endl;
+    }
+    return 0;
+}
